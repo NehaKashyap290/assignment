@@ -1,0 +1,45 @@
+.container{
+  margin: o auto;
+  display: flex;
+  width:700px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card{
+  position: relative;
+  flex:1;
+  object-fit: cover;
+  height: 250px;
+  transition: 0.3s ease;
+}
+.card img{
+  position: absolute;
+  height: 300px;
+  filter: brightness(0.8);
+}
+.img2{
+  flex: 2;
+}
+.card:hover{
+  flex:2;
+  cursor: pointer;
+  animation: zoomInOut 0.5s ease-in-out;
+}
+.text{
+  position: absolute;
+  color: white;
+  padding-top: 2px;
+  padding-left: 5px;
+}
+@keyframes zoomInOut {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
